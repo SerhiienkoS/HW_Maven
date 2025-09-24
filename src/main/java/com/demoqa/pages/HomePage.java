@@ -18,4 +18,11 @@ public class HomePage extends BasePage{
         click(javaScriptAlerts);
         return new JavaScriptAlertsPage(driver);
     }
+    @FindBy(css = "a[href='/nested_frames']")
+    WebElement nestedFrames;
+    public NestedFramesPage getNestedFrames(){
+        click(nestedFrames);
+        return new NestedFramesPage(driver);
+    }
+
 }
