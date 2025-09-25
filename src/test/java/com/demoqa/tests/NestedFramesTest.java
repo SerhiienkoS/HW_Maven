@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
+
 
 public class NestedFramesTest extends TestBase {
     private NestedFramesPage frames;

@@ -24,5 +24,11 @@ public class HomePage extends BasePage{
         click(nestedFrames);
         return new NestedFramesPage(driver);
     }
+    @FindBy(css = "a[href='/windows']")
+    WebElement multipleWindowsLink;
+    public MultipleWindowsPage getMultipleWindows(){
+        click(multipleWindowsLink);
+        return new MultipleWindowsPage(driver);
+    }
 
 }
