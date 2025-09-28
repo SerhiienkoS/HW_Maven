@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -14,27 +14,40 @@ public class HomePage extends BasePage{
 
     WebElement javaScriptAlerts;
 
-    public JavaScriptAlertsPage getJavaScriptAlerts(){
+    public JavaScriptAlertsPage getJavaScriptAlerts() {
         click(javaScriptAlerts);
         return new JavaScriptAlertsPage(driver);
     }
+
     @FindBy(css = "a[href='/nested_frames']")
     WebElement nestedFrames;
-    public NestedFramesPage getNestedFrames(){
+
+    public NestedFramesPage getNestedFrames() {
         click(nestedFrames);
         return new NestedFramesPage(driver);
     }
+
     @FindBy(css = "a[href='/windows']")
     WebElement multipleWindowsLink;
-    public MultipleWindowsPage getMultipleWindows(){
+
+    public MultipleWindowsPage getMultipleWindows() {
         click(multipleWindowsLink);
         return new MultipleWindowsPage(driver);
     }
+
     @FindBy(css = "a[href='/horizontal_slider']")
     WebElement horizontalSlider;
 
-    public HorizontalSliderPage getHorizontalSlider(){
+    public HorizontalSliderPage getHorizontalSlider() {
         click(horizontalSlider);
         return new HorizontalSliderPage(driver);
+    }
+
+    @FindBy(css = "a[href='/hovers']")
+    WebElement hovers;
+
+    public HoversPage getHovers() {
+        click(hovers);
+        return new HoversPage(driver);
     }
 }
