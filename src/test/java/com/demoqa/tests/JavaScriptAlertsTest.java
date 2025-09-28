@@ -40,11 +40,5 @@ public class JavaScriptAlertsTest extends TestBase {
                 "Некорректный текст после JS Prompt (Accept)");
     }
 
-    // опционально:
-    // @Test
-    // public void jsPromptCancelTest(){
-    //     alerts.clickJsPromptAndSubmit("ignored", false);
-    //     Assert.assertEquals(alerts.getResultText(),
-    //             "You entered: null");
-    // }
+
 }

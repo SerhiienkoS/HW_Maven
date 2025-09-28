@@ -30,5 +30,11 @@ public class HomePage extends BasePage{
         click(multipleWindowsLink);
         return new MultipleWindowsPage(driver);
     }
+    @FindBy(css = "a[href='/horizontal_slider']")
+    WebElement horizontalSlider;
 
+    public HorizontalSliderPage getHorizontalSlider(){
+        click(horizontalSlider);
+        return new HorizontalSliderPage(driver);
+    }
 }
