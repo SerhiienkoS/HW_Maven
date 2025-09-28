@@ -64,5 +64,12 @@ public class HomePage extends BasePage {
         click(dropdown);
         return new DropdownPage(driver);
     }
+    @FindBy(css = "a[href='/drag_and_drop']")
+    WebElement dragAndDrop;
+
+    public DragAndDropPage getDragAndDrop() {
+        click(dragAndDrop);
+        return new DragAndDropPage(driver);
+    }
 
 }
