@@ -72,4 +72,18 @@ public class HomePage extends BasePage {
         return new DragAndDropPage(driver);
     }
 
+    @FindBy(css = "a[href='/broken_images']")
+    WebElement brokenImages;
+
+    public BrokenImagesPage getBrokenImages() {
+        click(brokenImages);
+        return new BrokenImagesPage(driver);
+    }
+    @FindBy(css = "a[href='/redirector']")
+    WebElement redirection;
+
+    public RedirectionPage getRedirection() {
+        click(redirection);
+        return new RedirectionPage(driver);
+    }
 }
